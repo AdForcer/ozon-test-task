@@ -1,0 +1,41 @@
+.progress-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity var(--transition);
+}
+
+.progress-ring_bg,
+.progress-ring_circle {
+    stroke-width: 8;
+    fill: transparent;
+}
+
+.progress-ring_bg {
+    stroke: var(--gray150);
+}
+
+.progress-ring_circle {
+    stroke: var(--ozBlue);
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.35s ease-in-out;
+}
+
+.progress-wrapper.is-hidden { 
+    visibility: hidden; 
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Состояние Animated с оптимизацией */
+.progress-wrapper.is-animated .progress-ring { 
+    animation: spin 2s linear infinite; 
+    transform-origin: 50% 50%; 
+    will-change: transform;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
