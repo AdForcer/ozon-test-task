@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Block</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/ring.css">
+    <link rel="stylesheet" href="./styles/ui.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <h1 class="title">progressBar</h1>
+
+        <div class="content-wrapper">
+            <div class="progress-wrapper">
+                <svg class="progress-ring" width="120" height="120">
+                    <circle class="progress-ring_bg" r="52" cx="60" cy="60" />
+                    <circle class="progress-ring_circle" r="52" cx="60" cy="60" />
+                </svg>
+            </div>
+
+            <div class="controls">
+
+                <div class="control-group">
+                    <input type="number" id="value-input" class="value-input" value="60" min="0" max="100">
+                    <label for="value-input">Value</label>
+                </div>
+
+                <div class="control-group">
+                    <label class="switch">
+                        <input type="checkbox" id="animate-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="animate-toggle">Animate</label>
+                </div>
+
+                <div class="control-group">
+                    <label class="switch">
+                        <input type="checkbox" id="hide-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="hide-toggle">Hide</label>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
